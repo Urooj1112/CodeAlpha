@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-size: cover;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 999;
+    background: black;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background: #8749f2;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: rgb(219, 213, 193);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: #8749f2;
+    transition: all 0.3s ease;
+  
+}
+
+.navbar.sticky .logo a span{
+    color: rgb(219, 213, 193);
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: rgb(219, 213, 193);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: #8749f2;
+   
+}
+
+.navbar.sticky .menu li a:hover{
+    color: rgb(219, 213, 193);
+}
+
+.menu-btn{
+    color: rgb(219, 213, 193);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+} 
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #8749f2;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: rgb(219, 213, 193);
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.home{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* background: url(backpic.png) no-repeat; */
+    color: #F27BBD;
+    background-color: #10439F;
+    min-height: 1000px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;  
+}
+
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: #C65BCF;
+    font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: #8749f2;
+    color: rgb(219, 213, 193);
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #8749f2;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color: #8749f2;
+    background: none;
+}
+
+section{
+    padding: 100px 0;;
+}
+
+section .title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* font-family: 'Ubuntu',sans-serif; */
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 180px;
+    height: 3px;
+    left: 50%;
+    background: black;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    color: #8749f2;
+    font-size: 20px;
+    padding: 5px;
+    background: rgb(219, 213, 193);
+    transform: translateX(-50%);
+}
+
+.about, .projects, .experience, .contact, footer{
+    font-family: 'Poppins',sans-serif;
+}
+
+.about .about-content, 
+.experience .experience-content,
+.contact .contact-content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: #8749f2;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    background: #8749f2;
+    color: rgb(219, 213, 193);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #8749f2;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+    color: #8749f2;
+    background: none;
+}
+
+.projects{
+    color: rgb(219, 213, 193); 
+    background-color: black;
+}
+.projects .title::before{
+    background: rgb(219, 213, 193);
+}
+.projects .title::after{
+    background: black;
+
+}
+
+.projects .projects-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.projects .projects-content .project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects .projects-content .project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.projects .projects-content .project .layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#8749f2);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.projects .projects-content .project .layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.projects .projects-content .project .layer a{
+    margin-top: 20px;
+    color: #8749f2;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: rgb(219, 213, 193);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.projects .projects-content .project:hover img{
+    transform: scale(1.1);
+}
+
+.projects .projects-content .project:hover .layer{
+    height: 100%;
+}
+
+.experience .experience-content .column{
+    width: calc(50% - 30px);
+}
+
+.experience .experience-content .left .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.experience .experience-content .left p{
+    text-align: justify;
+}
+
+.experience .experience-content .left a{
+    display: inline-block;
+    background: #8749f2;
+    color: rgb(219, 213, 193);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #8749f2;
+    transition: all 0.3s ease;
+}
+
+.experience .experience-content .left a:hover{
+    color: #8749f2;
+    background: none;
+}
+
+.experience .experience-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.experience .experience-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience .experience-content .right span{
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.experience .experience-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.experience .experience-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #8749f2;
+}
+
+.experience .experience-content .right .html::before{
+    width: 90%;
+}
+
+.experience .experience-content .right .clang::before{
+    width: 80%;
+}
+.experience .experience-content .right .c::before{
+    width: 80%;
+}
+.experience .experience-content .right .css::before{
+    width: 70%;
+}
+.experience .experience-content .right .ts::before{
+    width: 65%;
+}
+
+.contact{
+    color: rgb(219, 213, 193); 
+    background-color: black;
+}
+
+.contact .title::before{
+    background: rgb(219, 213, 193);
+}
+
+.contact .title::after{
+    background: black;
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #8749f2;
+}
+
+.contact .contact-content .info .head{
+    font-weight: 400;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button{
+    width: 170px ;
+    height: 50px;
+}
+
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #8749f2;
+    background: #8749f2;
+    color: rgb(219, 213, 193);
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover{
+    color: rgb(219, 213, 193);
+    background: none;
+}
+
+
+footer{
+    background: #8749f2;
+    padding: 20px 23px;
+    color: black;
+    text-align: center;
+}
+
+footer span a{
+    color: #09080c;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}

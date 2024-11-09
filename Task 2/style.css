@@ -1,0 +1,50 @@
+body {
+    /* background-image: url('https://as1.ftcdn.net/v2/jpg/02/85/88/92/1000_F_285889235_4OdZaoyEhH7D1ZBAGrBNsOJrHUHLtM9o.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-color: rgb(52, 73, 94  );
+    height: 100vh;
+
+}
+.heading {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-display: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 125%;
+   
+}
+.cal_body{
+    background-color: black;
+    height: 240px;
+    width: 220px;
+    border-radius: 5px;
+ 
+}
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width:1300px;
+    
+}
+.screen {
+    display: flex;
+    background-color: grey;
+    height: 45px;
+    border: 2px solid rgb(8, 8, 8);
+}
+.b1 {
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 40px;
+}

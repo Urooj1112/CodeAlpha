@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page {
+    background-color: #7A2048 ;
+    height: 90%;
+    width: 45%; /* Increased width for better fit */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 100px;
+    font-weight: bolder;
+    color: #1E2761;
+    margin: 10px;
+}
+/* Gallery container */
+.gallery {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+}
+  
+/* Gallery item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+  
+/* Image styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+  
+.gallery-item:hover img {
+    transform: scale(1.05); /* Zoom effect */
+}
+  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+  
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
+}
